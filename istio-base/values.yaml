@@ -1,3 +1,5 @@
+
+#helm install istio-base istio/base -n istio-system
 global:
 
   # ImagePullSecrets for control plane ServiceAccount, list of secrets in the same namespace
