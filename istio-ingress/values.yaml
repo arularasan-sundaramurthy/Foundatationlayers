@@ -50,7 +50,9 @@ service:
     port: 443
     protocol: TCP
     targetPort: 443
-  annotations: {}
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true" 
   loadBalancerIP: ""
   loadBalancerSourceRanges: []
   externalTrafficPolicy: ""
@@ -77,9 +79,7 @@ env: {}
 labels: {}
 
 # Annotations to apply to all resources
-annotations:
-  service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
-  service.beta.kubernetes.io/aws-load-balancer-internal: "true"  
+annotations: {} 
 
 nodeSelector: {}
 
