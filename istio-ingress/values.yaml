@@ -57,7 +57,7 @@ gateways:
     #--set serviceAnnotations.cloud.google.com/load-balancer-type=internal
     serviceAnnotations:
       #cloud.google.com/load-balancer-type: "internal"
-      service.beta.kubernetes.io/aws-load-balancer-type: "internal" 
+      service.beta.kubernetes.io/aws-load-balancer-type: "nlb" 
 
     podAnnotations: {}
     type: LoadBalancer #change to NodePort, ClusterIP or LoadBalancer if need be
