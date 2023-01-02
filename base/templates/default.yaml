@@ -3,6 +3,7 @@ apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
   name: istiod-default-validator
+  namespace: istio-system
   labels:
     app: istiod
     release: {{ .Release.Name }}
@@ -20,7 +21,8 @@ webhooks:
         {{- else }}
         name: istiod-{{ .Values.defaultRevision }}
         {{- end }}
-        namespace: {{ .Values.global.istioNamespace }}
+        #namespace: {{ .Values.global.istioNamespace }}
+        namespace: istio-system
         path: "/validate"
       {{- end }}
     rules:
