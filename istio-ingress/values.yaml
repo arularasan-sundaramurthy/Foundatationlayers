@@ -43,23 +43,15 @@ gateways:
       limits:
         cpu: 2000m
         memory: 1024Mi
-    #annotations: 
-      #service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
-     #service.beta.kubernetes.io/aws-load-balancer-internal: "true"    
 
     loadBalancerIP: ""
     loadBalancerSourceRanges: []
-    #serviceAnnotations: {}
-    #service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
-    #service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+    serviceAnnotations: {}
 
     # To generate an internal load balancer:
-    #--set serviceAnnotations.cloud.google.com/load-balancer-type=internal
-    serviceAnnotations:
-      #cloud.google.com/load-balancer-type: "internal"
-      service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
-      service.beta.kubernetes.io/aws-load-balancer-internal: "true"
-      service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-0fd7d2887dda7bbb2
+    # --set serviceAnnotations.cloud.google.com/load-balancer-type=internal
+    #serviceAnnotations:
+    #    cloud.google.com/load-balancer-type: "internal"
 
     podAnnotations: {}
     type: LoadBalancer #change to NodePort, ClusterIP or LoadBalancer if need be
