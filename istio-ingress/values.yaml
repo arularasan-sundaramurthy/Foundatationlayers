@@ -59,7 +59,7 @@ gateways:
       #cloud.google.com/load-balancer-type: "internal"
       service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
       service.beta.kubernetes.io/aws-load-balancer-internal: "true"
-      #service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-0fd7d2887dda7bbb2
+      service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-0fd7d2887dda7bbb2
 
     podAnnotations: {}
     type: LoadBalancer #change to NodePort, ClusterIP or LoadBalancer if need be
