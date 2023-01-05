@@ -69,7 +69,7 @@ hostNetwork:
   # if you use Weave network on EKS
   enabled: false
 
-replicas: 30
+replicas: 50
 
 updateStrategy: {}
 #   type: RollingUpdate
