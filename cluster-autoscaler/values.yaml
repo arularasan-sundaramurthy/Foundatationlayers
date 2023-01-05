@@ -16,7 +16,7 @@ autoDiscovery:
   # autoDiscovery.tags -- ASG tags to match, run through `tpl`.
   tags:
     - k8s.io/cluster-autoscaler/enabled
-    - k8s.io/cluster-autoscaler/{{ .Values.autoDiscovery.clusterName }}
+    - k8s.io/cluster-autoscaler/argoistio
   # - kubernetes.io/cluster/{{ .Values.autoDiscovery.clusterName }}
 
   # autoDiscovery.roles -- Magnum node group roles to match.
