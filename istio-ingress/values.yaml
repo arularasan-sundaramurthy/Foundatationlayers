@@ -3,7 +3,8 @@
 
 gateways:
   istio-ingressgateway:
-    name: istio-ingressgateway
+    #name: istio-ingressgateway
+    name: istio-ingress
     labels:
       app: istio-ingressgateway
       istio: ingressgateway
