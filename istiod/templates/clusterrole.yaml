@@ -1,4 +1,3 @@
-{{- if .Values.global.configCluster }}
 {{ $mcsAPIGroup := or .Values.pilot.env.MCS_API_GROUP "multicluster.x-k8s.io" }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -83,9 +82,6 @@ rules:
       - "signers"
     resourceNames:
     - "kubernetes.io/legacy-unknown"
-{{- range .Values.global.certSigners }}
-    - {{ . | quote }}
-{{- end }}
     verbs: ["approve"]
 
   # Used by Istiod to verify the JWT tokens
@@ -139,5 +135,4 @@ rules:
   - apiGroups: [""]
     verbs: [ "get", "watch", "list", "update", "patch", "create", "delete" ]
     resources: [ "services" ]
-{{- end }}
 {{- end }}
