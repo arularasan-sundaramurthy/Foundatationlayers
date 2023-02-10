@@ -140,7 +140,14 @@ nodeSelector: {}
 
 tolerations: []
 
-affinity: {}
+affinity:
+ nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: test
+            operator: In
+            values: test1
 
 topologySpreadConstraints: []
 
