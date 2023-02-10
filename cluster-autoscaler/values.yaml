@@ -11,12 +11,12 @@ autoDiscovery:
   # Enable autodiscovery for `cloudProvider=clusterapi`, for groups matching `autoDiscovery.labels`.
   # Enable autodiscovery for `cloudProvider=gce`, but no MIG tagging required.
   # Enable autodiscovery for `cloudProvider=magnum`, for groups matching `autoDiscovery.roles`.
-  clusterName: argoistio
+  clusterName: argoappstest
 
   # autoDiscovery.tags -- ASG tags to match, run through `tpl`.
   tags:
     - k8s.io/cluster-autoscaler/enabled
-    - k8s.io/cluster-autoscaler/argoistio
+    - k8s.io/cluster-autoscaler/argoappstest
   # - kubernetes.io/cluster/{{ .Values.autoDiscovery.clusterName }}
 
   # autoDiscovery.roles -- Magnum node group roles to match.
