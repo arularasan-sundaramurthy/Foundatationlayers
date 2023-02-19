@@ -5,12 +5,13 @@ pilot:
   autoscaleEnabled: true
   autoscaleMin: 1
   autoscaleMax: 5
-  replicaCount: 2
+  replicaCount: 1
   rollingMaxSurge: 100%
   rollingMaxUnavailable: 25%
 
   hub: ""
   tag: ""
+  variant: ""
 
   # Can be a full hub/image:tag
   image: pilot
@@ -21,6 +22,9 @@ pilot:
     requests:
       cpu: 500m
       memory: 2048Mi
+
+  # Set to `type: RuntimeDefault` to use the default profile if available.
+  seccompProfile: {}
 
   env: {}
 
@@ -42,7 +46,7 @@ pilot:
   jwksResolverExtraRootCA: ""
 
   # This is used to set the source of configuration for
-  # the associated address in configSource, if nothing is specificed
+  # the associated address in configSource, if nothing is specified
   # the default MCP is assumed.
   configSource:
     subscribedResources: []
@@ -235,7 +239,10 @@ global:
   # Dev builds from prow are on gcr.io
   hub: docker.io/istio
   # Default tag for Istio images.
-  tag: 1.15.3
+  tag: 1.16.2
+  # Variant of the image to use.
+  # Currently supported are: [debug, distroless]
+  variant: ""
 
   # Specify image pull policy if default behavior isn't desired.
   # Default behavior: latest images will be Always else IfNotPresent.
@@ -349,8 +356,8 @@ global:
         cpu: 100m
         memory: 128Mi
       limits:
-        cpu: 200m
-        memory: 250Mi
+        cpu: 2000m
+        memory: 1024Mi
 
     # Default port for Pilot agent health checks. A value of 0 will disable health checking.
     statusPort: 15020
