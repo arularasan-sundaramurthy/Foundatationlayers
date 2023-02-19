@@ -5,7 +5,7 @@ name: ""
 # revision declares which revision this gateway is a part of
 revision: ""
 
-replicaCount: 1
+replicaCount: 2
 
 kind: Deployment
 
