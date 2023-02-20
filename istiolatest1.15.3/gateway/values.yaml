@@ -50,7 +50,7 @@ service:
     port: 443
     protocol: TCP
     targetPort: 443
-  annotations:
+  annotations: 
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
     service.beta.kubernetes.io/aws-load-balancer-internal: "false"
     service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-03cdf63df8950daaa
@@ -92,5 +92,9 @@ affinity: {}
 
 # If specified, the gateway will act as a network gateway for the given network.
 networkGateway: ""
+
+# Specify image pull policy if default behavior isn't desired.
+# Default behavior: latest images will be Always else IfNotPresent
+imagePullPolicy: ""
 
 imagePullSecrets: []
