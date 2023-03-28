@@ -53,7 +53,7 @@ service:
   annotations: 
     service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
     service.beta.kubernetes.io/aws-load-balancer-internal: "false"
-    service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-03cdf63df8950daaa
+    service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-02eb5b1ec20ae9d28, subnet-0f47986e6061a082f
   loadBalancerIP: ""
   loadBalancerSourceRanges: []
   externalTrafficPolicy: ""
