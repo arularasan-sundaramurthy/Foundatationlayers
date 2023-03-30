@@ -243,9 +243,9 @@ global:
   # Releases are published to docker hub under 'istio' project.
   # Dev builds from prow are on gcr.io
   #hub: docker.io/istio
-  hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/foundationalservice
+  hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/foundationalservice:1
   # Default tag for Istio images.
-  tag: 1.17.0
+  tag: 1
   # Variant of the image to use.
   # Currently supported are: [debug, distroless]
   variant: ""
