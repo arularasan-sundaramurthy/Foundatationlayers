@@ -245,7 +245,7 @@ global:
   #hub: docker.io/istio
   hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/foundationalservice
   # Default tag for Istio images.
-  tag: 1.17.0
+  tag: proxyv2
   # Variant of the image to use.
   # Currently supported are: [debug, distroless]
   variant: ""
