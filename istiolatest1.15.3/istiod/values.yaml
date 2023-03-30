@@ -243,9 +243,9 @@ global:
   # Releases are published to docker hub under 'istio' project.
   # Dev builds from prow are on gcr.io
   #hub: docker.io/istio
-  hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com
+  hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/foundationalservice
   # Default tag for Istio images.
-  tag: 1
+  tag: 1.17.0
   # Variant of the image to use.
   # Currently supported are: [debug, distroless]
   variant: ""
@@ -308,7 +308,7 @@ global:
   priorityClassName: ""
 
   proxy:
-    image: foundationalservice
+    image: proxyv2
 
     # This controls the 'policy' in the sidecar injector.
     autoInject: enabled
