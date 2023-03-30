@@ -308,7 +308,7 @@ global:
   priorityClassName: ""
 
   proxy:
-    image: proxyv2
+    image: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/foundationalservice:1
 
     # This controls the 'policy' in the sidecar injector.
     autoInject: enabled
