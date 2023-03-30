@@ -243,7 +243,7 @@ global:
   # Releases are published to docker hub under 'istio' project.
   # Dev builds from prow are on gcr.io
   #hub: docker.io/istio
-  hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/istio/proxyv2
+  hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/istio
   # Default tag for Istio images.
   tag: 1.17.0
   # Variant of the image to use.
