@@ -14,7 +14,7 @@ pilot:
   variant: ""
 
   # Can be a full hub/image:tag
-  image: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/foundationalservice:1.17.0
+  image: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/istio/pilot:1.17.0
   traceSampling: 1.0
 
   # Resources for a small pilot install
@@ -243,9 +243,9 @@ global:
   # Releases are published to docker hub under 'istio' project.
   # Dev builds from prow are on gcr.io
   #hub: docker.io/istio
-  hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/foundationalservice
+  hub: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/istio/proxyv2
   # Default tag for Istio images.
-  tag: proxyv2
+  tag: 1.17.0
   # Variant of the image to use.
   # Currently supported are: [debug, distroless]
   variant: ""
