@@ -14,7 +14,7 @@ pilot:
   variant: ""
 
   # Can be a full hub/image:tag
-  image: pilot
+  image: 649502456029.dkr.ecr.ap-south-1.amazonaws.com/foundationalservice:1.17.0
   traceSampling: 1.0
 
   # Resources for a small pilot install
