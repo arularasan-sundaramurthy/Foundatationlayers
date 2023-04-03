@@ -59,7 +59,7 @@ autoscalingGroupsnamePrefix: []
 awsAccessKeyID: ""
 
 # awsRegion -- AWS region (required if `cloudProvider=aws`)
-awsRegion: us-west-2
+awsRegion: ap-south-1
 
 # awsSecretAccessKey -- AWS access secret key ([if AWS user keys used](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md#using-aws-credentials))
 awsSecretAccessKey: ""
